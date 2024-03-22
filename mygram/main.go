@@ -50,7 +50,7 @@ func main() {
 	routes.CommentRoutes(r)
 	routes.SocialMediaRoutes(r)
 
-	port := os.Getenv("APP_PORT")
+	port := os.Getenv("PORT")
 
 	// Run the server
 	r.Run(":" + port)
