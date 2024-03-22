@@ -1,25 +1,25 @@
 package main
 
 import (
-	"log"
+	// "log"
 	"mygram/configs"
 	"mygram/models"
 	"mygram/routes"
 	"os"
 
 	"github.com/gin-gonic/gin"
-	"github.com/joho/godotenv"
+	// "github.com/joho/godotenv"
 )
 
 func main() {
 	// Create a new gin instance
 	r := gin.Default()
 
-	// Load .env file and Create a new connection to the database
-	err := godotenv.Load(".env")
-	if err != nil {
-		log.Fatal("Error loading .env file")
-	}
+	// // Load .env file and Create a new connection to the database, uncomment to test locally
+	// err := godotenv.Load(".env")
+	// if err != nil {
+	// 	log.Fatal("Error loading .env file")
+	// }
 
 	var db string = os.Getenv("DB")
 	if db == "mysql" {
@@ -50,6 +50,8 @@ func main() {
 	routes.CommentRoutes(r)
 	routes.SocialMediaRoutes(r)
 
+	port := os.Getenv("APP_PORT")
+
 	// Run the server
-	r.Run(":8080")
+	r.Run(":" + port)
 }
