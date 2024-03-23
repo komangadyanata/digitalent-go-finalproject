@@ -181,6 +181,9 @@ func DeleteUser(c *gin.Context) {
 	user := models.User{}
 	user.ID = userID
 
+	db.Where("user_id = ?", user.ID).Delete(&models.Comment{})
+	db.Where("user_id = ?", user.ID).Delete(&models.Photo{})
+	db.Where("user_id = ?", user.ID).Delete(&models.SocialMedia{})
 	err := db.Delete(&user).Error
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{

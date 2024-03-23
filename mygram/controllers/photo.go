@@ -140,6 +140,7 @@ func DeletePhoto(c *gin.Context) {
 	photo.ID = uint(photoId)
 	photo.UserId = userID
 
+	db.Where("photo_id = ?", photo.ID).Delete(&models.Comment{})
 	err := db.Delete(&photo).Error
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{
