@@ -28,7 +28,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"age\": 22,\r\n    \"username\": \"adyanata\",\r\n    \"password\": \"Test123;\",\r\n    \"email\": \"adyanatakomang@gmail.com\"\r\n}",
+							"raw": "{\r\n    \"age\": 10,\r\n    \"username\": \"user1\",\r\n    \"password\": \"Test123;\",\r\n    \"email\": \"user1@gmail.com\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -36,12 +36,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://{{host}}:{{port}}/users/register",
-							"protocol": "http",
+							"raw": "{{host:port}}/users/register",
 							"host": [
-								"{{host}}"
+								"{{host:port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"users",
 								"register"
@@ -79,7 +77,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"adyanatakomang@gmail.com\",\r\n    \"password\": \"Test123;\"\r\n}",
+							"raw": "{\r\n    \"email\": \"user1@gmail.com\",\r\n    \"password\": \"Test123;\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -87,12 +85,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://{{host}}:{{port}}/users/login",
-							"protocol": "http",
+							"raw": "{{host:port}}/users/login",
 							"host": [
-								"{{host}}"
+								"{{host:port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"users",
 								"login"
@@ -140,7 +136,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"adyanatakomang@gmail.com\",\r\n    \"username\": \"adyanata123\"\r\n}",
+							"raw": "{\r\n    \"email\": \"adyanatakomang123@gmail.com\",\r\n    \"username\": \"adyanata123\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -148,12 +144,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://{{host}}:{{port}}/users",
-							"protocol": "http",
+							"raw": "{{host:port}}/users",
 							"host": [
-								"{{host}}"
+								"{{host:port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"users"
 							]
@@ -199,12 +193,10 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://{{host}}:{{port}}/users",
-							"protocol": "http",
+							"raw": "{{host:port}}/users",
 							"host": [
-								"{{host}}"
+								"{{host:port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"users"
 							]
@@ -256,7 +248,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"title\": \"Photo2\",\r\n    \"caption\": \"Caption2\",\r\n    \"photo_url\": \"http://photo-url.com\"\r\n}",
+							"raw": "{\r\n    \"title\": \"Photo1\",\r\n    \"caption\": \"Caption1\",\r\n    \"photo_url\": \"http://photo-url.com\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -264,12 +256,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://{{host}}:{{port}}/photos",
-							"protocol": "http",
+							"raw": "{{host:port}}/photos",
 							"host": [
-								"{{host}}"
+								"{{host:port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"photos"
 							]
@@ -305,12 +295,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://{{host}}:{{port}}/photos",
-							"protocol": "http",
+							"raw": "{{host:port}}/photos",
 							"host": [
-								"{{host}}"
+								"{{host:port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"photos"
 							]
@@ -365,12 +353,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://{{host}}:{{port}}/photos/:photoId",
-							"protocol": "http",
+							"raw": "{{host:port}}/photos/:photoId",
 							"host": [
-								"{{host}}"
+								"{{host:port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"photos",
 								":photoId"
@@ -378,7 +364,7 @@
 							"variable": [
 								{
 									"key": "photoId",
-									"value": "1"
+									"value": "4"
 								}
 							]
 						}
@@ -423,12 +409,10 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://{{host}}:{{port}}/photos/:photoId",
-							"protocol": "http",
+							"raw": "{{host:port}}/photos/:photoId",
 							"host": [
-								"{{host}}"
+								"{{host:port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"photos",
 								":photoId"
@@ -436,7 +420,7 @@
 							"variable": [
 								{
 									"key": "photoId",
-									"value": "1"
+									"value": "2"
 								}
 							]
 						}
@@ -487,7 +471,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"message\": \"Comment Photo\",\r\n    \"photo_id\": 2\r\n}",
+							"raw": "{\r\n    \"message\": \"Comment Photo Lagi\",\r\n    \"photo_id\": 2\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -495,12 +479,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://{{host}}:{{port}}/comments",
-							"protocol": "http",
+							"raw": "{{host:port}}/comments",
 							"host": [
-								"{{host}}"
+								"{{host:port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"comments"
 							]
@@ -536,12 +518,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://{{host}}:{{port}}/comments",
-							"protocol": "http",
+							"raw": "{{host:port}}/comments",
 							"host": [
-								"{{host}}"
+								"{{host:port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"comments"
 							]
@@ -596,12 +576,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://{{host}}:{{port}}/comments/:commentId",
-							"protocol": "http",
+							"raw": "{{host:port}}/comments/:commentId",
 							"host": [
-								"{{host}}"
+								"{{host:port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"comments",
 								":commentId"
@@ -609,7 +587,7 @@
 							"variable": [
 								{
 									"key": "commentId",
-									"value": "2"
+									"value": "1"
 								}
 							]
 						}
@@ -654,12 +632,10 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://{{host}}:{{port}}/comments/:commentId",
-							"protocol": "http",
+							"raw": "{{host:port}}/comments/:commentId",
 							"host": [
-								"{{host}}"
+								"{{host:port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"comments",
 								":commentId"
@@ -667,7 +643,7 @@
 							"variable": [
 								{
 									"key": "commentId",
-									"value": "2"
+									"value": "1"
 								}
 							]
 						}
@@ -708,7 +684,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Social Media\",\r\n    \"social_media_url\": \"http://social-media.com\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Social Media 2\",\r\n    \"social_media_url\": \"http://social-media.com\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -716,12 +692,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://{{host}}:{{port}}/socialmedias",
-							"protocol": "http",
+							"raw": "{{host:port}}/socialmedias",
 							"host": [
-								"{{host}}"
+								"{{host:port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"socialmedias"
 							]
@@ -757,12 +731,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://{{host}}:{{port}}/socialmedias",
-							"protocol": "http",
+							"raw": "{{host:port}}/socialmedias",
 							"host": [
-								"{{host}}"
+								"{{host:port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"socialmedias"
 							]
@@ -817,12 +789,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://{{host}}:{{port}}/socialmedias/:socialMediaId",
-							"protocol": "http",
+							"raw": "{{host:port}}/socialmedias/:socialMediaId",
 							"host": [
-								"{{host}}"
+								"{{host:port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"socialmedias",
 								":socialMediaId"
@@ -875,12 +845,10 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://{{host}}:{{port}}/socialmedias/:socialMediaId",
-							"protocol": "http",
+							"raw": "{{host:port}}/socialmedias/:socialMediaId",
 							"host": [
-								"{{host}}"
+								"{{host:port}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"socialmedias",
 								":socialMediaId"
@@ -922,17 +890,13 @@
 	],
 	"variable": [
 		{
-			"key": "host",
-			"value": "localhost"
-		},
-		{
-			"key": "port",
-			"value": "8080"
-		},
-		{
 			"key": "bearer-token",
-			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkeWFuYXRha29tYW5nQGdtYWlsLmNvbSIsImlkIjoyfQ.QQyosrMHviuN3DFfmFucnaK7y2bLZEISZO7bdzbRv6I",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXIyQGdtYWlsLmNvbSIsImlkIjozfQ.vYW4CKWPlyU82dBfb3dH7zNSmFT8kDN-mGzdlsDP0Hw",
 			"type": "string"
+		},
+		{
+			"key": "host:port",
+			"value": "https://digitalent-go-finalproject-komangadyanata.up.railway.app"
 		}
 	]
 }
